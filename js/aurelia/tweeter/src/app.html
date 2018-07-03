@@ -1,0 +1,11 @@
+<template>
+  <require from="./resources/elements/tweet"></require>
+
+  <h1>Tweeter</h1>
+
+  <div class="container">
+    <tweet-feed>
+      <tweet repeat.for="tweet of tweets" tweet.bind="tweet"></tweet>
+    </tweet-feed>
+  </div>
+</template>

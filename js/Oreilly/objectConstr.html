@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title> Constructing objects </title>
+    <meta charset="utf-8">
+    <script>
+        function Book(title, author, published, hasMovie){
+            this.title = title;
+            this.author = author;
+            this.published = published;
+            this.hasMovie = hasMovie;
+
+            this.display = function() {
+                console.log(this);
+            };
+        }
+
+        var book1 = new Book("The Hound of the Baskervilles", "Sir Arthur Conan Doyle", 1901, true);
+        book1.display();
+    </script>
+</head>
+</html>
