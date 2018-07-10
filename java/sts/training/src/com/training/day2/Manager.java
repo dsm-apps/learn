@@ -19,5 +19,3 @@ public class Manager extends Employee1 {
 	
 	// Manager gets all of Employee's public methods!
 }
-
-Employee emp = new Manager();
