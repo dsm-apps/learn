@@ -12,6 +12,7 @@ public class Manager4 extends Employee4 {
 	public String getDetails() {
 		return super.getDetails() + " Department:" + deptName;
 	}
+	
 		
 	public static void main(String[] args) {
 		Employee4 e = new Employee4(101, "Jim Smith", "022-23-2345", 100_000.00);
@@ -22,7 +23,9 @@ public class Manager4 extends Employee4 {
 		System.out.println(m.getDetails());
 		System.out.println(mgr.getDetails());  // Virtual Method invocation
 		
+		
 		// Casting objects
 		Manager4 mmm = (Manager4) mgr;
+		
 	}
 }

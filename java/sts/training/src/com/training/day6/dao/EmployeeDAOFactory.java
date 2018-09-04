@@ -2,7 +2,9 @@ package com.training.day6.dao;
 
 public class EmployeeDAOFactory {
 
-	public EmployeeDAO createEmployeeDAO() {
+	static EmployeeDAO dao = null;
+	
+	public static EmployeeDAO createEmployeeDAO() {
 		
 		/**
 		 * For simplicity we have hard coded the name of the concrete class.
@@ -11,13 +13,22 @@ public class EmployeeDAOFactory {
 		 * Similar to the commented example below.
 		 */
 		
-		/*
-		String name = "com.example.dao.EmployeeDAOMemoryImpl";
-		Class clazz = Class.forName(name);
-		EmployeDAO dao = (EmployeeDAO) clazz.newInstance();
-		*/
+		if(dao != null) {
+			return dao;
+		}
 		
-		return new EmployeeDAOMemoryImpl();
+		try {
+			String name = "com.example.dao.Hibernate";
+			Class clazz = Class.forName(name);
+			 dao = (EmployeeDAO) clazz.newInstance();
+		} catch (Exception e) {
+
+		}
+		
+		return dao;
+		
+		
+		//return new EmployeeDAOMemoryImpl();
 	}
 	
 }

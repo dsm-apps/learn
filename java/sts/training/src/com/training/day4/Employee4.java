@@ -15,18 +15,33 @@ public class Employee4 {
 	}
 	
 	public String getDetails() {
+
+		
 		return "Employee id: " + empId + " Employee name:" + name;
+		
+		
 	}
 	
-	
+	@Override
 	public boolean equals(Object o) {
+		
 		boolean result = false;
+		
 		if((o != null) && o instanceof Employee4) {
 			Employee4 e = (Employee4) o;
 			if((e.empId == this.empId)) {
 				return true;
 			}
 		}
+		
 		return result;
 	}
+	
+	
+	
+	public void printClassDetails() {
+		System.out.println(hashCode());
+	}
+	
+
 }

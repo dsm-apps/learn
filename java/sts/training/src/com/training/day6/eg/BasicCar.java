@@ -4,6 +4,6 @@ public class BasicCar implements Car {
 
 	@Override
 	public void start() {
+		
 	}
-
 }
